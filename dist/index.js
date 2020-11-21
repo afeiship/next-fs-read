@@ -3,7 +3,7 @@
  * description: Read file with fs for next.
  * homepage: https://github.com/afeiship/next-fs-read
  * version: 1.0.0
- * date: 2020-11-21 12:13:15
+ * date: 2020-11-21 12:14:37
  * license: MIT
  */
 
