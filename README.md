@@ -15,9 +15,7 @@ npm install -S @jswork/next-fs-read
 ```js
 import '@jswork/next-fs-read';
 
-const str = nx.fsRead('./__tests__/E201.lrc', { charset: 'gbk' });
-
-str.includes('私');
+nx.fsRead('./__tests__/E201.lrc', { charset: 'gbk' });
 // [00:00.800]--- lesson 1  A private conversation 私锟斤拷谈锟斤拷
 ```
 
