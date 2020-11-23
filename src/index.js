@@ -16,6 +16,8 @@
         return JSON.parse(response);
       case 'buffer':
         return buf;
+      case 'array':
+        return response.split('\n');
       default:
         return response;
     }

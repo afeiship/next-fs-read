@@ -3,9 +3,18 @@
 
   describe('api.basic test', () => {
     test('nx.fsRead charset:gbk', function () {
-      var str = nx.fsRead('./__tests__/E201.lrc', { charset: 'gbk' });
-      console.log(str);
-      expect(str.includes('私')).toBe(true);
+      const target = nx.fsRead('./__tests__/E201.lrc', { charset: 'utf8' });
+      expect(target.includes('第一单元')).toBe(true);
+    });
+
+    test('nx.fsRead response: array', () => {
+      const target = nx.fsRead('./__tests__/E201.lrc', { responseType: 'array' });
+      expect(Array.isArray(target)).toBe(true);
+    });
+
+    test('nx.fsRead response: json', () => {
+      const target = nx.fsRead('./__tests__/res.json', { responseType: 'json' });
+      expect(target).toEqual({ username: 'afeiship', homepage: 'https://js.work' });
     });
   });
 })();

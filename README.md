@@ -15,15 +15,15 @@ npm install -S @jswork/next-fs-read
 ```js
 import '@jswork/next-fs-read';
 
-nx.fsRead('./__tests__/E201.lrc', { charset: 'gbk' });
+nx.fsRead('./__tests__/E201.lrc', { charset: 'utf8' });
 // [00:00.800]--- lesson 1  A private conversation 私锟斤拷谈锟斤拷
 ```
 
 ## options
-| name         | type   | default | description      |
-| ------------ | ------ | ------- | ---------------- |
-| charset      | string | utf-8   | Content charset. |
-| responseType | string | string  | Results type.    |
+| name         | type   | default | description         |
+| ------------ | ------ | ------- | ------------------- |
+| charset      | string | utf-8   | Content charset.    |
+| responseType | string | string  | Results type(string | json | array). |
 
 ## license
 Code released under [the MIT license](https://github.com/afeiship/next-fs-read/blob/master/LICENSE.txt).

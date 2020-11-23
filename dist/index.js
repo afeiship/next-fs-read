@@ -3,7 +3,7 @@
  * description: Read file with fs for next.
  * homepage: https://github.com/afeiship/next-fs-read
  * version: 1.0.1
- * date: 2020-11-21 21:42:36
+ * date: 2020-11-23 13:15:57
  * license: MIT
  */
 
@@ -12,18 +12,21 @@
   var nx = global.nx || require('@jswork/next');
   var fs = require('fs');
   var iconv = require('iconv-lite');
-  var DEFAULT_OPTIONS = { charset: 'utf8', responseType: 'string' };
+  var UTF8 = 'utf8';
+  var DEFAULT_OPTIONS = { charset: UTF8, responseType: 'string' };
 
   nx.fsRead = function (inFilename, inOptions) {
     var options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
     var charset = options.charset;
     var buf = fs.readFileSync(inFilename);
-    var response = charset === 'utf8' ? buf.toString() : iconv.decode(buf, charset);
+    var response = charset === UTF8 ? buf.toString() : iconv.decode(buf, charset);
     switch (options.responseType) {
       case 'json':
         return JSON.parse(response);
       case 'buffer':
         return buf;
+      case 'array':
+        return response.split('\n');
       default:
         return response;
     }
