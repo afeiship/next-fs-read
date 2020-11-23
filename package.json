@@ -1,6 +1,6 @@
 {
   "name": "@jswork/next-fs-read",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Read file with fs for next.",
   "homepage": "https://github.com/afeiship/next-fs-read",
   "author": {
