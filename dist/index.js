@@ -2,8 +2,8 @@
  * name: @jswork/next-fs-read
  * description: Read file with fs for next.
  * homepage: https://github.com/afeiship/next-fs-read
- * version: 1.0.2
- * date: 2020-11-23 13:16:36
+ * version: 1.0.3
+ * date: 2020-11-23 13:19:41
  * license: MIT
  */
 
